@@ -27,7 +27,7 @@ player.configure({
   drm: {
     clearKeys: {
       // 'key-id-in-hex': 'key-in-hex',
-      '8ab47741930c476780515f9a00decb0a': '7ab4b9ae5a48aa526e511a913b832769'
+      '64fdf75a9fc7fa2f0dc197ecdfd07eba': '44094f8dd29164989b9daecb9aabf4f2'
     }
   }
 });
@@ -36,7 +36,7 @@ window.player = player;
 window.ui = ui; 
 player.addEventListener('error', onPlayerErrorEvent); 
 controls.addEventListener('error', onUIErrorEvent); 
-try{await player.load('https://getdazn.starlive.workers.dev/https://dcf-fs-live-dazn-cdn.dazn.com/dashdrm/dazn-linear-022/stream.mpd'); 
+try{await player.load('https://svc40.main.sl.t-online.de/LCID3221228350.originalserver.prod.sngtv.t-online.de/PLTV/88888888/224/3221228350/3221228350.mpd'); 
 console.log('The video has now been loaded!');} catch (error) {onPlayerError(error);}} 
 function onPlayerErrorEvent(errorEvent) {onPlayerError(event.detail);} 
 function onPlayerError(error) {console.error('Error code', error.code, 'object', error);} 
