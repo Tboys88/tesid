@@ -27,7 +27,7 @@ player.configure({
   drm: {
     clearKeys: {
       // 'key-id-in-hex': 'key-in-hex',
-      '5269ab07e6a6db7585324ae20542f191': 'dba0dccffba1b26f658ec85a616102e8'
+      '1a1019287e374379aab5e941464a0c20': '59c965cebb5b9e23297086be561068a0'
     }
   }
 });
@@ -36,7 +36,7 @@ window.player = player;
 window.ui = ui; 
 player.addEventListener('error', onPlayerErrorEvent); 
 controls.addEventListener('error', onUIErrorEvent); 
-try{await player.load('https://strm.yandex.ru/kal/match_football1_hd/manifest.mpd'); 
+try{await player.load('https://d2e27gsr9y6c4h.cloudfront.net/v1/dash/4ad19442a5c36709752f44aae3b98db617a3c3d7/sportplus_Production/masterCH2.mpd'); 
 console.log('The video has now been loaded!');} catch (error) {onPlayerError(error);}} 
 function onPlayerErrorEvent(errorEvent) {onPlayerError(event.detail);} 
 function onPlayerError(error) {console.error('Error code', error.code, 'object', error);} 
