@@ -1,50 +1,73 @@
-<!DOCTYPE html><html><head>
-<script src="/cdn-cgi/apps/head/aqhzBqkyhgXFT9tYquvCBE2xpuY.js"></script><style>div a img{visibility:hidden;}</style>
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<meta name="referrer" content="no-referrer" />
-<script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.2/shaka-player.ui.min.js' crossorigin='anonymous'></script>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.0.2/controls.min.css' crossorigin='anonymous' />
-<script async src='/cdn-cgi/challenge-platform/h/g/scripts/invisible.js?cb=6ebfddfd6fa3499c'></script></head><body><script>!function(a,b,c,d,e,f){a.ddjskey=e;a.ddoptions=f||null;var m=b.createElement(c),n=b.getElementsByTagName(c)[0];m.async=1,m.src=d,n.parentNode.insertBefore(m,n)}(window,document,"script","https://js.datadome.co/tags.js","99B1C08278137CE22ADB60CE8DE020", {"ajaxListenerPath": true});</script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+<meta name="referrer" content="no-referrer"/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.3/shaka-player.ui.min.js' crossorigin='anonymous'></script>
+<link rel='stylesheet' href='https://reisyah.github.io/ngopy/shakacontrol.css' crossorigin='anonymous'/>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/gaya.css' crossorigin='anonymous'/>
+</head>
 <body bgcolor='black' style='margin:0' oncontextmenu='return false' onkeydown='return false' onmousedown='return false'>
-  
-   <style>
-    
-    .video-fill video {
-  object-fit: fill;
-}
-    
-  </style>
-  
-  <script>!function(a,b,c,d,e,f){a.ddjskey=e;a.ddoptions=f||null;var m=b.createElement(c),n=b.getElementsByTagName(c)[0];m.async=1,m.src=d,n.parentNode.insertBefore(m,n)}(window,document,"script","https://js.datadome.co/tags.js","99B1C08278137CE22ADB60CE8DE020", {"ajaxListenerPath": true});</script>
-<div class="container video-fill" data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit:fill cover;'><video autoplay data-shaka-player id='video' poster="https://tboys88.github.io/Test-In/zlogo.jpeg" style='width:100%;height:100%;'></video></div>
-<script> 
-async function init() { 
-const video = document.getElementById('video'); 
-const ui = video['ui']; 
-const controls = ui.getControls(); 
-const player = controls.getPlayer(); 
-player.configure({
-  drm: {
-    clearKeys: {
-      // 'key-id-in-hex': 'key-in-hex',
-      'e2701194a551d30b35a7d493937e50f1': '382ff0152278d8ba946d4fd82a09b212'
-    }
-  }
-});
-//player.configure({drm:{servers:{'com.widevine.alpha':'https://license.dstv.com/widevine/getLicense?CrmId=afl&AccountId=afl&ContentId=SH2&SessionId=D3C00F885C24B9C6&Ticket=C839A8D71AB94299'}}}); 
-window.player = player; 
-window.ui = ui; 
-player.addEventListener('error', onPlayerErrorEvent); 
-controls.addEventListener('error', onUIErrorEvent); 
-try{await player.load('https://pylocallivechanneldash.lcdn.clarotv.com.py/Content/DASH_DASH_FK/Live/channel(ESPN)/master.mpd?'); 
-console.log('The video has now been loaded!');} catch (error) {onPlayerError(error);}} 
-function onPlayerErrorEvent(errorEvent) {onPlayerError(event.detail);} 
-function onPlayerError(error) {console.error('Error code', error.code, 'object', error);} 
-function onUIErrorEvent(errorEvent) {onPlayerError(event.detail);} 
-function initFailed(errorEvent) {console.error('Unable to load the UI library!');} 
-document.addEventListener('shaka-ui-loaded', init); 
-document.addEventListener('shaka-ui-load-failed', initFailed); 
+<div id="vidio" data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit:fill cover;'>
+	<video autoplay data-shaka-player id='video' poster="https://tboys88.github.io/Test-In/zlogo.jpeg" style='width:100%;height:100%;'></video>
+	<div class="shaka-controls-container" shown="true">
+		<div class="shaka-scrim-container"></div>
+		<div class="shaka-play-buton-container">
+			<button class="shaka-play-button shaka-no-propagation" ion="pause" aria-abel="Pause"></button>
+		</div>
+		<div class="shaka-server-side-ad-container"></div>
+		<div class="shaka-bottom-controls shaka-no-propagation">
+			<div class="shaka-ad-controls shaka-hidden">
+				<div class="shaka-ad-position shaka-hidden">
+					<span class="shaka-ad-position-span"></span>
+				</div>
+				<div class="shaka-ad-counter">
+					<span class="shaka-ad-counter-span"></span>
+				</div>
+			</div>
+	
+			</div>
+		</div>
+	</div>
+</div>
+	
+<div id='fixedban' style='width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:;bottom:0;z-index:999;-webkit-transform:translateZ(0);'>
+<div>
+<a id='close-fixedban' onclick='document.getElementById("fixedban").style.display = "none";' style='cursor:pointer;'><img alt='close' src='https://1.bp.blogspot.com/-_A83iDM6JYc/VhtxROLILrI/AAAAAAAADK4/aM4ikIA6aqI/s1600/btn_close.gif' title='close button' style='vertical-align:middle;'/></a></div>
+<div style='text-align:center;display:block;max-width:100%;height:auto;overflow:hidden;margin:auto'>
+		<center>
+		<fieldset class="btn0">
+  <legend class="btn1" >ASPEK RASIO</legend>
+ <button class="btn2" onclick="fill ()">FILL
+  <button class="btn2" onclick="fit ()">FIT
+ <button class="btn2" onclick="zoomIn ()">ZOOM IN
+ <button class="btn2" onclick="zoomOut ()">ZOOM OUT
+ </button>
+ <!--
+  <a href="go:nstnt2" class="btn2" >OPEN NS PLAYER
+
+ </a>
+ -->
+</fieldset>
+		  
+		</center>
+	</div>
+		</div>
+</div>
+<script src='https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/fullscreen.js' crossorigin='anonymous'></script>
+<script src='https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/aspekrasio.js' crossorigin='anonymous'></script>
+<script src='https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/popupwindow.js' crossorigin='anonymous'></script>
+<script src='https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/aspekrasio.js' crossorigin='anonymous'>
+ </script>
+ 
+ 
+ <!-- STOP NYURI GA BAIK -->
+
+   
+<script type="text/javascript">
+<!-- mastamvan.blogspot.com--> 
+document.write(unescape('%3C%73%63%72%69%70%74%3E%20%0A%63%6F%6E%73%74%20%70%75%6E%79%61%5F%6C%73%62%74%76%20%3D%20%27%68%74%74%70%73%3A%2F%2F%70%79%6C%6F%63%61%6C%6C%69%76%65%63%68%61%6E%6E%65%6C%64%61%73%68%2E%6C%63%64%6E%2E%63%6C%61%72%6F%74%76%2E%63%6F%6D%2E%70%79%2F%43%6F%6E%74%65%6E%74%2F%44%41%53%48%5F%44%41%53%48%5F%46%4B%2F%4C%69%76%65%2F%63%68%61%6E%6E%65%6C%28%45%53%50%4E%29%2F%6D%61%73%74%65%72%2E%6D%70%64%27%3B%0A%61%73%79%6E%63%20%66%75%6E%63%74%69%6F%6E%20%69%6E%69%74%28%29%20%7B%20%0A%63%6F%6E%73%74%20%76%69%64%65%6F%20%3D%20%64%6F%63%75%6D%65%6E%74%2E%67%65%74%45%6C%65%6D%65%6E%74%42%79%49%64%28%27%76%69%64%65%6F%27%29%3B%20%0A%63%6F%6E%73%74%20%75%69%20%3D%20%76%69%64%65%6F%5B%27%75%69%27%5D%3B%20%0A%63%6F%6E%73%74%20%63%6F%6E%66%69%67%20%3D%20%7B%0A%20%20%20%20%20%20%27%73%65%65%6B%42%61%72%43%6F%6C%6F%72%73%27%3A%20%7B%0A%20%20%20%20%20%20%20%20%62%61%73%65%3A%20%27%77%68%69%74%65%27%2C%0A%20%20%20%20%20%20%20%20%62%75%66%66%65%72%65%64%3A%20%27%62%6C%75%65%27%2C%0A%20%20%20%20%20%20%20%20%70%6C%61%79%65%64%3A%20%27%72%65%64%27%2C%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%75%69%2E%63%6F%6E%66%69%67%75%72%65%28%63%6F%6E%66%69%67%29%3B%0A%63%6F%6E%73%74%20%63%6F%6E%74%72%6F%6C%73%20%3D%20%75%69%2E%67%65%74%43%6F%6E%74%72%6F%6C%73%28%29%3B%20%0A%63%6F%6E%73%74%20%70%6C%61%79%65%72%20%3D%20%63%6F%6E%74%72%6F%6C%73%2E%67%65%74%50%6C%61%79%65%72%28%29%3B%20%0A%70%6C%61%79%65%72%2E%63%6F%6E%66%69%67%75%72%65%28%7B%0A%20%20%64%72%6D%3A%20%7B%0A%20%20%20%20%63%6C%65%61%72%4B%65%79%73%3A%20%7B%0A%20%20%20%20%20%20%2F%2F%20%27%6B%65%79%2D%69%64%2D%69%6E%2D%68%65%78%27%3A%20%27%6B%65%79%2D%69%6E%2D%68%65%78%27%2C%0A%20%20%20%20%20%20%27%65%32%37%30%31%31%39%34%61%35%35%31%64%33%30%62%33%35%61%37%64%34%39%33%39%33%37%65%35%30%66%31%27%3A%20%27%33%38%32%66%66%30%31%35%32%32%37%38%64%38%62%61%39%34%36%64%34%66%64%38%32%61%30%39%62%32%31%32%27%0A%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%29%3B%0A%2F%2F%70%6C%61%79%65%72%2E%63%6F%6E%66%69%67%75%72%65%28%7B%64%72%6D%3A%7B%73%65%72%76%65%72%73%3A%7B%27%63%6F%6D%2E%77%69%64%65%76%69%6E%65%2E%61%6C%70%68%61%27%3A%27%68%74%74%70%73%3A%2F%2F%6C%69%63%65%6E%73%65%2E%64%73%74%76%2E%63%6F%6D%2F%77%69%64%65%76%69%6E%65%2F%67%65%74%4C%69%63%65%6E%73%65%3F%43%72%6D%49%64%3D%61%66%6C%26%41%63%63%6F%75%6E%74%49%64%3D%61%66%6C%26%43%6F%6E%74%65%6E%74%49%64%3D%53%48%32%26%53%65%73%73%69%6F%6E%49%64%3D%44%33%43%30%30%46%38%38%35%43%32%34%42%39%43%36%26%54%69%63%6B%65%74%3D%43%38%33%39%41%38%44%37%31%41%42%39%34%32%39%39%27%7D%7D%7D%29%3B%20%0A%70%6C%61%79%65%72%2E%63%6F%6E%66%69%67%75%72%65%28%27%6D%61%6E%69%66%65%73%74%2E%64%61%73%68%2E%69%67%6E%6F%72%65%4D%69%6E%42%75%66%66%65%72%54%69%6D%65%27%2C%20%74%72%75%65%29%3B%0A%70%6C%61%79%65%72%2E%63%6F%6E%66%69%67%75%72%65%28%27%73%74%72%65%61%6D%69%6E%67%2E%72%65%62%75%66%66%65%72%69%6E%67%47%6F%61%6C%27%2C%20%35%2F%2A%20%73%65%63%6F%6E%64%20%2A%2F%29%3B%0A%77%69%6E%64%6F%77%2E%70%6C%61%79%65%72%20%3D%20%70%6C%61%79%65%72%3B%20%0A%77%69%6E%64%6F%77%2E%75%69%20%3D%20%75%69%3B%20%0A%0A%70%6C%61%79%65%72%2E%61%64%64%45%76%65%6E%74%4C%69%73%74%65%6E%65%72%28%27%65%72%72%6F%72%27%2C%20%6F%6E%50%6C%61%79%65%72%45%72%72%6F%72%45%76%65%6E%74%29%3B%20%0A%63%6F%6E%74%72%6F%6C%73%2E%61%64%64%45%76%65%6E%74%4C%69%73%74%65%6E%65%72%28%27%65%72%72%6F%72%27%2C%20%6F%6E%55%49%45%72%72%6F%72%45%76%65%6E%74%29%3B%20%0A%74%72%79%7B%61%77%61%69%74%20%70%6C%61%79%65%72%2E%6C%6F%61%64%28%70%75%6E%79%61%5F%6C%73%62%74%76%29%3B%20%0A%63%6F%6E%73%6F%6C%65%2E%6C%6F%67%28%27%54%68%65%20%76%69%64%65%6F%20%68%61%73%20%6E%6F%77%20%62%65%65%6E%20%6C%6F%61%64%65%64%21%27%29%3B%7D%20%63%61%74%63%68%20%28%65%72%72%6F%72%29%20%7B%6F%6E%50%6C%61%79%65%72%45%72%72%6F%72%28%65%72%72%6F%72%29%3B%7D%7D%20%0A%66%75%6E%63%74%69%6F%6E%20%6F%6E%50%6C%61%79%65%72%45%72%72%6F%72%45%76%65%6E%74%28%65%72%72%6F%72%45%76%65%6E%74%29%20%7B%6F%6E%50%6C%61%79%65%72%45%72%72%6F%72%28%65%76%65%6E%74%2E%64%65%74%61%69%6C%29%3B%7D%20%0A%66%75%6E%63%74%69%6F%6E%20%6F%6E%50%6C%61%79%65%72%45%72%72%6F%72%28%65%72%72%6F%72%29%20%7B%63%6F%6E%73%6F%6C%65%2E%65%72%72%6F%72%28%27%45%72%72%6F%72%20%63%6F%64%65%27%2C%20%65%72%72%6F%72%2E%63%6F%64%65%2C%20%27%6F%62%6A%65%63%74%27%2C%20%65%72%72%6F%72%29%3B%7D%20%0A%66%75%6E%63%74%69%6F%6E%20%6F%6E%55%49%45%72%72%6F%72%45%76%65%6E%74%28%65%72%72%6F%72%45%76%65%6E%74%29%20%7B%6F%6E%50%6C%61%79%65%72%45%72%72%6F%72%28%65%76%65%6E%74%2E%64%65%74%61%69%6C%29%3B%7D%20%0A%66%75%6E%63%74%69%6F%6E%20%69%6E%69%74%46%61%69%6C%65%64%28%65%72%72%6F%72%45%76%65%6E%74%29%20%7B%63%6F%6E%73%6F%6C%65%2E%65%72%72%6F%72%28%27%55%6E%61%62%6C%65%20%74%6F%20%6C%6F%61%64%20%74%68%65%20%55%49%20%6C%69%62%72%61%72%79%21%27%29%3B%7D%20%0A%64%6F%63%75%6D%65%6E%74%2E%61%64%64%45%76%65%6E%74%4C%69%73%74%65%6E%65%72%28%27%73%68%61%6B%61%2D%75%69%2D%6C%6F%61%64%65%64%27%2C%20%69%6E%69%74%29%3B%20%0A%64%6F%63%75%6D%65%6E%74%2E%61%64%64%45%76%65%6E%74%4C%69%73%74%65%6E%65%72%28%27%73%68%61%6B%61%2D%75%69%2D%6C%6F%61%64%2D%66%61%69%6C%65%64%27%2C%20%69%6E%69%74%46%61%69%6C%65%64%29%3B%20%0A%3C%2F%73%63%72%69%70%74%3E%0A'));
 </script>
-<script type='text/javascript' src='https://encrypt2.skycdn.ga/udp/Counter'></script>
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6ebfddfd6fa3499c',m:'D4YJv6au4IB.PA2DqTLxZStJydWh51fiwv2G9eC_8Gk-1647290874-0-AYjwUV5YDhzDCl2C9r7Xi8tcRCaEcQTbCAMGCeTNqDvB45L3MnGBdkKHu6G387dXhgYcctN3ANz21D9fu1HhsRAcyKR0VCGqS9aNi6PQ8MvMDWfoO6WhJhqlukHMDXtYfg==',s:[0x6c6fafcade,0x9f5e65094f],u:'/cdn-cgi/challenge-platform/h/g'}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6ebfddfd6fa3499c","version":"2021.12.0","r":1,"token":"a919438182254588b33b5297605b9ab4","si":100}' crossorigin="anonymous"></script>
+
+
 </html>
