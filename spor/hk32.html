@@ -27,7 +27,7 @@ player.configure({
   drm: {
     clearKeys: {
       // 'key-id-in-hex': 'key-in-hex',
-      '1658b366669f443384cefee3ec401d65': 'CCE0929C1AB140670002D4C253C73654'
+      '451d2f5521f03118ab0b08fff91b7bce': 'c1997f65812cdf0c0651991c6c5a8c5b'
     }
   }
 });
@@ -36,7 +36,7 @@ window.player = player;
 window.ui = ui; 
 player.addEventListener('error', onPlayerErrorEvent); 
 controls.addEventListener('error', onUIErrorEvent); 
-try{await player.load('https://cdnlb.tvplayhome.lt/live/eds/Setanta21_HD_HVC/GO3_LIVE_DASH_HVC/Setanta21_HD_HVC.mpd'); 
+try{await player.load('https://rthktv31-vos-live.akamaized.net/Content/DASH/Live/channel(rthk_ch32)/master.mpd'); 
 console.log('The video has now been loaded!');} catch (error) {onPlayerError(error);}} 
 function onPlayerErrorEvent(errorEvent) {onPlayerError(event.detail);} 
 function onPlayerError(error) {console.error('Error code', error.code, 'object', error);} 
